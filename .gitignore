@@ -1,2 +1,6 @@
 updater/
 *.png
+.claude/
+config.js
+progress.md
+project_process.md
