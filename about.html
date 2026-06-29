@@ -15,11 +15,12 @@
       <a href="index.html" class="logo">픽뮤직</a>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴">☰</button>
       <ul class="nav-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="music.html">음악 목록</a></li>
-        <li><a href="about.html">소개</a></li>
-        <li><a href="privacy.html">개인정보처리방침</a></li>
-        <li><button class="btn-request">음악 신청</button></li>
+        <li><a href="index.html" data-i18n="nav.home">홈</a></li>
+        <li><a href="music.html" data-i18n="nav.music">음악 목록</a></li>
+        <li><a href="about.html" data-i18n="nav.about">소개</a></li>
+        <li><a href="privacy.html" data-i18n="nav.privacy">개인정보처리방침</a></li>
+        <li><button class="btn-request" data-i18n="nav.request">음악 신청</button></li>
+        <li><button class="btn-lang" id="langToggle">EN</button></li>
       </ul>
     </nav>
   </header>
@@ -90,6 +91,7 @@
       <p class="modal-success hidden" id="modalSuccess">감사합니다! 검토 후 추가할게요 😊</p>
     </div>
   </div>
+  <script src="js/i18n.js"></script>
   <script src="js/request.js"></script>
   <script src="js/nav.js"></script>
 

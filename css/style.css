@@ -99,6 +99,25 @@ header {
 }
 .btn-request:hover { opacity: 0.85; }
 
+/* 언어 토글 버튼 */
+.btn-lang {
+  background: none;
+  border: 1px solid var(--border, #333);
+  color: var(--muted, #888);
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.btn-lang:hover {
+  border-color: var(--accent-l, #c4b5fd);
+  color: var(--accent-l, #c4b5fd);
+}
+
 /* 신청 모달 */
 .modal-backdrop {
   position: fixed;

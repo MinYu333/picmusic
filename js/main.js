@@ -45,11 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleFile(file) {
   const allowed = ['image/jpeg', 'image/png', 'image/webp'];
   if (!allowed.includes(file.type)) {
-    alert('JPG, PNG, WEBP 이미지 파일만 업로드 가능합니다.');
+    const t = window.I18N?.[window.getLang?.()];
+    alert(t?.['alert.type'] ?? 'JPG, PNG, WEBP 이미지 파일만 업로드 가능합니다.');
     return;
   }
   if (file.size > 20 * 1024 * 1024) {
-    alert('파일 크기는 20MB 이하여야 합니다.');
+    const t = window.I18N?.[window.getLang?.()];
+    alert(t?.['alert.size'] ?? '파일 크기는 20MB 이하여야 합니다.');
     return;
   }
   currentFile = file;
@@ -178,13 +180,15 @@ function getImageBrightness(l) {
   return 'neutral';
 }
 
-const SEARCH_STEPS = [
-  { text: '사진 분위기 분석 중...', sub: '빛, 색감, 표정을 읽고 있어요' },
-  { text: '감정 해석 중...', sub: '사진의 무드를 파악하고 있어요' },
-  { text: '음악 데이터베이스 탐색 중...', sub: '1,000곡 중에서 찾고 있어요' },
-  { text: '딱 맞는 노래 찾는 중...', sub: '거의 다 됐어요' },
-  { text: '찾았다!', sub: '' },
-];
+function getSearchSteps() {
+  return window.I18N?.[window.getLang?.()]?.searchSteps ?? [
+    { text: '사진 분위기 분석 중...', sub: '빛, 색감, 표정을 읽고 있어요' },
+    { text: '감정 해석 중...', sub: '사진의 무드를 파악하고 있어요' },
+    { text: '음악 데이터베이스 탐색 중...', sub: '1,000곡 중에서 찾고 있어요' },
+    { text: '딱 맞는 노래 찾는 중...', sub: '거의 다 됐어요' },
+    { text: '찾았다!', sub: '' },
+  ];
+}
 
 // ===== MAIN ANALYSIS FLOW =====
 async function startAnalysis() {
@@ -215,7 +219,8 @@ async function startAnalysis() {
   } catch (err) {
     setLoading(false);
     console.error('[픽뮤직]', err);
-    alert('오류가 발생했습니다.\n' + err.message);
+    const tErr = window.I18N?.[window.getLang?.()];
+    alert((tErr?.['alert.error'] ?? '오류가 발생했습니다.\n') + err.message);
     return;
   }
 
@@ -245,9 +250,10 @@ async function runSearchAnimation() {
     }
   }
 
-  for (let i = 0; i < SEARCH_STEPS.length; i++) {
-    const { text, sub } = SEARCH_STEPS[i];
-    const isFinal = i === SEARCH_STEPS.length - 1;
+  const steps = getSearchSteps();
+  for (let i = 0; i < steps.length; i++) {
+    const { text, sub } = steps[i];
+    const isFinal = i === steps.length - 1;
     setMsg(text, sub, isFinal);
     await new Promise(r => setTimeout(r, isFinal ? 700 : 1050));
   }
@@ -335,7 +341,8 @@ function renderResults(mood, videos) {
   grid.innerHTML = '';
 
   if (videos.length === 0 || !videos[0]) {
-    grid.innerHTML = '<p class="no-results">어울리는 노래를 찾지 못했습니다. 다른 사진을 시도해보세요.</p>';
+    const noResultsMsg = window.I18N?.[window.getLang?.()]?.['no.results'] ?? '어울리는 노래를 찾지 못했습니다. 다른 사진을 시도해보세요.';
+    grid.innerHTML = `<p class="no-results">${noResultsMsg}</p>`;
     document.getElementById('shareArea').classList.add('hidden');
   } else {
     currentSong = videos[0];
@@ -485,7 +492,8 @@ function setupShareButtons(canvas, song) {
   };
 
   // X 공유
-  const text = encodeURIComponent(`내 사진에 어울리는 노래를 찾았어요 🎵\n${song.title}\n\n#픽뮤직`);
+  const tweetTpl = window.I18N?.[window.getLang?.()]?.['share.tweet'] ?? '내 사진에 어울리는 노래를 찾았어요 🎵\n{title}\n\n#픽뮤직';
+  const text = encodeURIComponent(tweetTpl.replace('{title}', song.title));
   const url  = encodeURIComponent('https://picmusic.pages.dev');
   document.getElementById('xShareBtn').onclick = () => {
     window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
