@@ -113,10 +113,6 @@ const MUSIC_DB = {
       "title": "Strategy - TWICE"
     },
     {
-      "id": "to3sjq-CAvA",
-      "title": "생각을 멈추다 보면 - 최유리"
-    },
-    {
       "id": "_AWDWdtaqKY",
       "title": "오늘 - 오왠 (O.WHEN)"
     },
@@ -221,10 +217,6 @@ const MUSIC_DB = {
       "title": "DDU-DU DDU-DU - BLACKPINK"
     },
     {
-      "id": "KSH-FVVtTf0",
-      "title": "Fantastic Baby - BIGBANG"
-    },
-    {
       "id": "l9CZykYZkOQ",
       "title": "Touch - KATSEYE"
     },
@@ -319,10 +311,6 @@ const MUSIC_DB = {
     {
       "id": "u9nP3qXQA4o",
       "title": "BOYNEXTDOOR - Earth, Wind & Fire"
-    },
-    {
-      "id": "n2bzA-ksXZI",
-      "title": "Bad Desire (With or Without You) - ENHYPEN"
     },
     {
       "id": "9qkpcLK422o",
@@ -507,10 +495,6 @@ const MUSIC_DB = {
     {
       "id": "Aiszg_6B6cw",
       "title": "Dame La Mano - INNA"
-    },
-    {
-      "id": "7bGlbtfyulY",
-      "title": "Millios - | 3. I'll Be OK"
     },
     {
       "id": "QtXby3twMmI",
@@ -743,10 +727,6 @@ const MUSIC_DB = {
     {
       "id": "MYIVW-wvlJQ",
       "title": "Watching Us - Wale ft Leon Thomas"
-    },
-    {
-      "id": "yOwqBJXoVDE",
-      "title": "Pete Bellis & Tommy, Costa Mee - | 13. Rise Up (Paul Lock Remix)"
     },
     {
       "id": "vNoKguSdy4Y",
@@ -1185,10 +1165,6 @@ const MUSIC_DB = {
       "title": "Go - Karri ft Kehlani"
     },
     {
-      "id": "jz-ILC6NT5M",
-      "title": "Paul Lock - | 15. Night Into Day (Original Mix)"
-    },
-    {
       "id": "A9hcJgtnm6Q",
       "title": "Nothing Breaks Like a Heart (ft. Miley Cyrus) - Mark Ronson"
     },
@@ -1199,10 +1175,6 @@ const MUSIC_DB = {
     {
       "id": "I2TBGUEBBm4",
       "title": "‘you.’ - Marlhy"
-    },
-    {
-      "id": "JZm6uCdeKJY",
-      "title": "Discovery Channel - | 27. 11 Tava, Robin Novaku, Kris Kiss"
     },
     {
       "id": "b1kbLwvqugk",
@@ -1403,16 +1375,8 @@ const MUSIC_DB = {
       "title": "Get You x Rock Wit’cha (MM Edit) - Daniel Caesar"
     },
     {
-      "id": "dmMzA_WARBE",
-      "title": "Never Say Never - Olivia Addams"
-    },
-    {
       "id": "5bGgKMt-RvI",
       "title": "‘Giving Up’ - Michigander"
-    },
-    {
-      "id": "p-Z3YrHJ1sU",
-      "title": "Cour - | 10. Stereo Love"
     },
     {
       "id": "3tmd-ClpJxA",
@@ -1659,20 +1623,12 @@ const MUSIC_DB = {
       "title": "Can't Feel My Face - The Weeknd"
     },
     {
-      "id": "UgcYLj4TLyo",
-      "title": "I’m Gone (Alt - BLXD"
-    },
-    {
       "id": "j5G04RwHxeM",
       "title": "Coco Jones - Most Beautiful Design"
     },
     {
       "id": "XgORPuPXWu8",
       "title": "‘Wild One’ - Hopeful."
-    },
-    {
-      "id": "n1a7o44WxNo",
-      "title": "Beautiful Now - | 11. Ascence"
     },
     {
       "id": "ko70cExuzZM",
@@ -2099,10 +2055,6 @@ const MUSIC_DB = {
       "title": "You Give Me Feels - Kellys Brown"
     },
     {
-      "id": "sJWu8sMMh0U",
-      "title": "Side Effects (Alt - BLXD"
-    },
-    {
       "id": "VHsJCGh4gr4",
       "title": "Worst Behaviour (Emcee Breezy One in A Million Mashup) - KWN"
     },
@@ -2305,10 +2257,6 @@ const MUSIC_DB = {
       "title": "VKTM - SICKOTOY x INNA x TAG"
     },
     {
-      "id": "i5pUOVC50Y8",
-      "title": "Open Arm - BLXD"
-    },
-    {
       "id": "YTdxdr9pNnw",
       "title": "Mr. Telephone Man - New Edition"
     },
@@ -2317,20 +2265,12 @@ const MUSIC_DB = {
       "title": "Baddest In The Room - Fridayy"
     },
     {
-      "id": "UU40fHaZx7o",
-      "title": "Costa Mee - | 12. Love In Undercover (Original Mix)"
-    },
-    {
       "id": "7Dx9_wmZsxs",
       "title": "Ping Pong - ANTONIA"
     },
     {
       "id": "r90FuOuqE60",
       "title": "‘Older’ - None The Younger"
-    },
-    {
-      "id": "0aXF3zFrLiE",
-      "title": "Angel With A Shotgun - | 15. Ericovich"
     },
     {
       "id": "V9vuCByb6js",
@@ -2403,10 +2343,6 @@ const MUSIC_DB = {
     {
       "id": "JLqXeMabsEQ",
       "title": "Wait On Me - 카이"
-    },
-    {
-      "id": "D-w2HwG18vg",
-      "title": "Icarus - ARTMS"
     },
     {
       "id": "IV6yrrLyhCA",
@@ -2529,10 +2465,6 @@ const MUSIC_DB = {
       "title": "Folded (Emcee Breezy It Depends Mashup) - Kehlani"
     },
     {
-      "id": "sJABwED5-wY",
-      "title": "Pete Bellis & Tommy, Costa Mee - | 4. Time Is Ticking"
-    },
-    {
       "id": "qFLhGq0060w",
       "title": "I Feel It Coming (ft. Daft Punk) - The Weeknd"
     },
@@ -2649,10 +2581,6 @@ const MUSIC_DB = {
       "title": "TWS - Last Festival"
     },
     {
-      "id": "EpeT62nMXy8",
-      "title": "동갑내기 - 호시X우지"
-    },
-    {
       "id": "a2grcJdfXmY",
       "title": "CELEBRATION - LE SSERAFIM"
     },
@@ -2761,10 +2689,6 @@ const MUSIC_DB = {
       "title": "Shot a friend - Holy Molly"
     },
     {
-      "id": "cl9_Nl2bbgA",
-      "title": "On The Bed (Alt - BLXD"
-    },
-    {
       "id": "xiZUf98A1Ts",
       "title": "Chanel (Emcee Breezy TBD Mashup) - Tyla"
     },
@@ -2806,10 +2730,6 @@ const MUSIC_DB = {
     },
     {
       "id": "nuhslQ_1kOk",
-      "title": "FREESTYLE - YOUNG POSSE"
-    },
-    {
-      "id": "vaWC4r5PL_0",
       "title": "FREESTYLE - YOUNG POSSE"
     },
     {
@@ -3007,10 +2927,6 @@ const MUSIC_DB = {
       "title": "TWS - Double Take"
     },
     {
-      "id": "3QChCsJMElc",
-      "title": "DOREMI - PURPLE KISS"
-    },
-    {
       "id": "QNXeGm-Wkms",
       "title": "New World - RESCENE"
     },
@@ -3125,10 +3041,6 @@ const MUSIC_DB = {
     {
       "id": "6YNZlXfW6Ho",
       "title": "Ella Mai - Boo'd Up"
-    },
-    {
-      "id": "K_9T9L3WvIE",
-      "title": "Losing You - | 20. MRLN & Robbie Hutton"
     },
     {
       "id": "8xg3vE8Ie_E",
@@ -3475,10 +3387,6 @@ const MUSIC_DB = {
       "title": "Enfin Apparu - Magi"
     },
     {
-      "id": "ReI0eJvTQf8",
-      "title": "뭘 잃었는지도 몰라 - - なにをなくしたかさえ"
-    },
-    {
       "id": "5iGttxBn9z4",
       "title": "ぜくろ - ねむるまち"
     },
@@ -3541,10 +3449,6 @@ const MUSIC_DB = {
     {
       "id": "py75EN-830I",
       "title": "H-Money, Rotimi & Ne-Yo - Sweet Gurl"
-    },
-    {
-      "id": "71n64DrXMjQ",
-      "title": "Listen To Your Heart (ft. Lunis) - | 3. Poylow"
     },
     {
       "id": "kLbn61Z4LDI",
