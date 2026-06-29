@@ -101,8 +101,7 @@ async function initFaceApi() {
   }
 }
 
-// 표정 → 분위기
-// happy/surprised → energetic, sad/fearful → emotional, angry/disgusted → intense, neutral → null(색감 폴백)
+// 표정 → { mood, brightness }
 async function detectFaceMood(imgEl) {
   const loaded = await initFaceApi();
   if (!loaded) return null;
@@ -116,47 +115,47 @@ async function detectFaceMood(imgEl) {
     const [topExp, topScore] = Object.entries(exp).sort(([, a], [, b]) => b - a)[0];
     if (topScore < 0.4) return null;
 
-    const map = {
-      happy: 'energetic',
-      surprised: 'energetic',
-      sad: 'emotional',
-      fearful: 'emotional',
-      angry: 'intense',
-      disgusted: 'intense',
+    const moodMap = {
+      happy: 'energetic', surprised: 'energetic',
+      sad: 'emotional',   fearful: 'emotional',
+      angry: 'intense',   disgusted: 'intense',
       neutral: null,
     };
-    return map[topExp] ?? null;
+    const brightnessMap = {
+      happy: 'bright', surprised: 'bright',
+      sad: 'dark',     fearful: 'dark',
+      angry: 'dark',   disgusted: 'dark',
+      neutral: null,
+    };
+    const mood       = moodMap[topExp] ?? null;
+    const brightness = brightnessMap[topExp] ?? null;
+    return mood ? { mood, brightness } : null;
   } catch {
     return null;
   }
 }
 
-// ===== COLOR → MOOD (폴백) =====
+// ===== COLOR → MOOD + BRIGHTNESS =====
 // bucket: 0=빨강 1=주황 2=노랑 3=초록 4=청록 5=파랑 6=보라 7=분홍
 function getColorMood(h, s, l, isHighContrast, bucket) {
   const scores = { energetic: 4, emotional: 4, intense: 4, dreamy: 4 };
 
-  // 밝기: 밝음→energetic/dreamy, 어두움→emotional/intense
   if (l > 0.6)      { scores.energetic += 2; scores.dreamy += 1; }
   else if (l > 0.4) { scores.energetic += 1; scores.dreamy += 1; }
   else if (l > 0.2) { scores.emotional += 2; scores.intense += 1; }
   else              { scores.intense += 2; scores.emotional += 1; }
 
-  // 채도: 선명→energetic/intense, 탁함→emotional/dreamy
   if (s > 0.5)      { scores.energetic += 2; scores.intense += 1; }
   else if (s > 0.25){ scores.energetic += 1; scores.dreamy += 1; }
   else              { scores.emotional += 2; scores.dreamy += 1; }
 
-  // 대비
   if (isHighContrast) { scores.intense += 1; scores.energetic += 1; }
   else                { scores.dreamy  += 1; scores.emotional += 1; }
 
-  // 색상: 따뜻한(빨/주황/노랑)→energetic, 차가운(파/보라)→dreamy/emotional
   if (bucket <= 2)      { scores.energetic += 1; }
   else if (bucket <= 5) { scores.dreamy += 1; }
   else                  { scores.emotional += 1; }
 
-  // 가중 랜덤
   const total = Object.values(scores).reduce((a, b) => a + b, 0);
   let rand = Math.random() * total;
   for (const [mood, score] of Object.entries(scores)) {
@@ -164,6 +163,12 @@ function getColorMood(h, s, l, isHighContrast, bucket) {
     if (rand <= 0) return mood;
   }
   return 'energetic';
+}
+
+function getImageBrightness(l) {
+  if (l > 0.55) return 'bright';
+  if (l < 0.35) return 'dark';
+  return 'neutral';
 }
 
 const SEARCH_STEPS = [
@@ -197,8 +202,9 @@ async function startAnalysis() {
     ]);
 
     // 얼굴 표정이 명확하면 우선, 아니면 색감 기반
-    mood = faceMood ?? canvasResult.mood;
-    videos = pickVideos(mood);
+    const imageBrightness = faceMood?.brightness ?? getImageBrightness(canvasResult.l);
+    mood = faceMood?.mood ?? canvasResult.mood;
+    videos = pickVideos(mood, imageBrightness);
   } catch (err) {
     setLoading(false);
     console.error('[픽뮤직]', err);
@@ -241,9 +247,16 @@ async function runSearchAnimation() {
 }
 
 // ===== MUSIC DB에서 영상 선택 =====
-function pickVideos(mood) {
-  const pool   = MUSIC_DB[mood] || [];
-  const source = pool.length >= 1 ? pool : Object.values(MUSIC_DB).flat();
+function pickVideos(mood, brightness) {
+  const pool = MUSIC_DB[mood] || [];
+  const base = pool.length >= 1 ? pool : Object.values(MUSIC_DB).flat();
+
+  // brightness 태그가 일치하는 곡만 추린 서브풀 (최소 5곡 이상일 때만 사용)
+  const filtered = brightness
+    ? base.filter(s => s.tags?.brightness === brightness)
+    : [];
+  const source = filtered.length >= 5 ? filtered : base;
+
   return [[...source].sort(() => Math.random() - 0.5)[0]];
 }
 
@@ -284,7 +297,7 @@ function analyzeWithCanvas(file) {
       const isHighContrast = variance > 0.04;
       const dominantBucket = hueBuckets.indexOf(Math.max(...hueBuckets));
 
-      resolve({ mood: getColorMood(avgH, avgS, avgL, isHighContrast, dominantBucket) });
+      resolve({ mood: getColorMood(avgH, avgS, avgL, isHighContrast, dominantBucket), l: avgL });
     };
 
     img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('이미지 로드 실패')); };
