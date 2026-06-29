@@ -401,10 +401,6 @@ const MUSIC_DB = {
       "title": "Blue Ambience - Mrs. GREEN APPLE, asmi"
     },
     {
-      "id": "3WUUFplHrVk",
-      "title": "Harutya [春茶] - - 34:38 Todokanai Kara"
-    },
-    {
       "id": "dawrQnvwMTY",
       "title": "Shinunoga E-Wa - Fujii Kaze"
     },
@@ -677,10 +673,6 @@ const MUSIC_DB = {
       "title": "Eine Kleine - Kenshi Yonezu"
     },
     {
-      "id": "5MRH-yfgxB0",
-      "title": "Harutya feat Osamu - - 39:53 Baby I Love You"
-    },
-    {
       "id": "hFCiDhq3KSU",
       "title": "‘I'll Be Ok’ - Michigander"
     },
@@ -691,10 +683,6 @@ const MUSIC_DB = {
     {
       "id": "TOOucNiEa00",
       "title": "DA$H - VVS"
-    },
-    {
-      "id": "JKJlXQxzTHg",
-      "title": "Akie秋絵xNatsuo夏璃夜 - - 26:44 Asu no Yozora Shoukai Han"
     },
     {
       "id": "xP_nrIzsH-8",
@@ -1367,10 +1355,6 @@ const MUSIC_DB = {
       "title": "ROBOT - Aldnoah.Zero"
     },
     {
-      "id": "PwzmIDwbpc8",
-      "title": "Kapi [かぴ] - - 27:02 Sekai wa Koi ni Ochite Iru"
-    },
-    {
       "id": "Q16fRezAHJg",
       "title": "ぜくろ & solar - Me Me She"
     },
@@ -1883,10 +1867,6 @@ const MUSIC_DB = {
       "title": "R.I.P - dita"
     },
     {
-      "id": "OIdOal008bo",
-      "title": "Ryoko - - 13:11 Sayoko"
-    },
-    {
       "id": "Wi7XZkQ9n7I",
       "title": "メガテラ・ゼロ(메가테라 제로) - 真赤(진홍)"
     },
@@ -2193,10 +2173,6 @@ const MUSIC_DB = {
       "title": "BOOMBAYAH (INTRO KMKZE ABTS) - BLACKPINK"
     },
     {
-      "id": "yebNIHKAC4A",
-      "title": "GOLDEN by HUNTRIX - - 3:13"
-    },
-    {
       "id": "mhKCRnUKp5U",
       "title": "WICKED - ALLDAY PROJECT"
     },
@@ -2263,10 +2239,6 @@ const MUSIC_DB = {
     {
       "id": "ZRtdQ81jPUQ",
       "title": "Idol - YOASOBI"
-    },
-    {
-      "id": "QzGWaS0lyIo",
-      "title": "ChouCho - - 36:40 Authentic Symphony"
     },
     {
       "id": "SIuF37EWaLU",
@@ -2413,10 +2385,6 @@ const MUSIC_DB = {
       "title": "This Is For (KMKZE MASHUP) - TWICE"
     },
     {
-      "id": "hAyPTJFgFEs",
-      "title": "SODA POP by SAJA BOYS - - 5:41"
-    },
-    {
       "id": "NHTdpkimWOU",
       "title": "Ridin' (Prod. THE HUB) - NMIXX"
     },
@@ -2461,10 +2429,6 @@ const MUSIC_DB = {
       "title": "ENHYPEN - Loose"
     },
     {
-      "id": "983bBbJx0Mk",
-      "title": "SODA POP by SAJA BOYS - - 5:41"
-    },
-    {
       "id": "KMythzAnNK0",
       "title": "Invincible - tripleS"
     },
@@ -2483,10 +2447,6 @@ const MUSIC_DB = {
     {
       "id": "hN5MBlGv2Ac",
       "title": "Subtitle - Official HIGE DANdism"
-    },
-    {
-      "id": "x6E_Qj30EZI",
-      "title": "Wotamin - - 41:53 Aishiteru"
     },
     {
       "id": "Mi9uNu35Gmk",
@@ -2519,10 +2479,6 @@ const MUSIC_DB = {
     {
       "id": "6GUKqEfiX1I",
       "title": "Cherry Blossom - HITGS (힛지스)"
-    },
-    {
-      "id": "4e5PMfVpcp0",
-      "title": "Hanatan - - 31:32 Tell Your World"
     },
     {
       "id": "paVYNlZ5Xuk",
@@ -2729,10 +2685,6 @@ const MUSIC_DB = {
       "title": "晩餐歌 - tuki"
     },
     {
-      "id": "g8ENtHe2hMU",
-      "title": "Yuika feat Ren [れん] - - 04:56 Sukidakara"
-    },
-    {
       "id": "F12Z5XLfceU",
       "title": "‘Answers’ - Salt Tree"
     },
@@ -2759,10 +2711,6 @@ const MUSIC_DB = {
     {
       "id": "e__MwDHpiTw",
       "title": "SO CURIOUS (Cover by izna(이즈나) JEONG SAE BI) - IZONE"
-    },
-    {
-      "id": "8mM-bp5PB34",
-      "title": "Wis - - 35:10 Ikanaide"
     },
     {
       "id": "mnta9Pp2LqA",
@@ -3127,10 +3075,6 @@ const MUSIC_DB = {
       "title": "어른 - 자이언티"
     },
     {
-      "id": "-ymi6hZahlo",
-      "title": "FREE by RUMI & JINU - - 17:59"
-    },
-    {
       "id": "grG41kS4MUA",
       "title": "STAYC - RUN2U"
     },
@@ -3149,10 +3093,6 @@ const MUSIC_DB = {
     {
       "id": "-GQg25oP0S4",
       "title": "Super - SEVENTEEN"
-    },
-    {
-      "id": "MtOvHD27GSg",
-      "title": "Nekonoki Mochi [猫乃木もち] - - 21:24 Mabataki"
     },
     {
       "id": "iGuDXYFlrjY",
@@ -3307,10 +3247,6 @@ const MUSIC_DB = {
       "title": "Happy End - back number"
     },
     {
-      "id": "wM4laths4-Y",
-      "title": "Kapi [かぴ] - - 27:02 Sekai wa Koi ni Ochite Iru"
-    },
-    {
       "id": "lRYyfwv2Fiw",
       "title": "‘THE LOWS’ - Caleb Hearn"
     },
@@ -3333,10 +3269,6 @@ const MUSIC_DB = {
     {
       "id": "YZEzhBBuf7E",
       "title": "[104EYES-29CA2]suite-2楽章 - Nanatsu no Taizai"
-    },
-    {
-      "id": "GNkPJvVEm0s",
-      "title": "Kano - - 52:40 Stella Rium"
     },
     {
       "id": "Ol1o3dgPIbI",
@@ -3547,10 +3479,6 @@ const MUSIC_DB = {
       "title": "뭘 잃었는지도 몰라 - - なにをなくしたかさえ"
     },
     {
-      "id": "jb4ybTQwcdw",
-      "title": "Minami - - 1:27:16 Main Actor"
-    },
-    {
       "id": "5iGttxBn9z4",
       "title": "ぜくろ - ねむるまち"
     },
@@ -3645,10 +3573,6 @@ const MUSIC_DB = {
     {
       "id": "trlOTS4nKO4",
       "title": "LUCID DREAM [JP Release] - IVE"
-    },
-    {
-      "id": "knUMag0Iu0g",
-      "title": "MarieFD - - 04:38 Orion Acoustic Arrange"
     },
     {
       "id": "9-P3qkHAogY",
