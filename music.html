@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>음악 목록 - 픽뮤직</title>
+  <meta name="description" content="픽뮤직에 등록된 1,000여 곡의 음악 목록입니다.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .music-list-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+    .music-list-page h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .music-list-page .page-sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+    .music-search {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border, #333);
+      background: var(--card, #1a1a1a);
+      color: var(--text, #fff);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      box-sizing: border-box;
+      outline: none;
+    }
+    .music-search:focus {
+      border-color: var(--accent, #a78bfa);
+    }
+    .music-count {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .music-ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .music-ol li {
+      border-bottom: 1px solid var(--border, #222);
+    }
+    .music-ol li a {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 11px 4px;
+      color: var(--text, #fff);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s;
+    }
+    .music-ol li a:hover {
+      color: var(--accent-l, #c4b5fd);
+    }
+    .music-ol li .num {
+      color: var(--muted);
+      font-size: 0.75rem;
+      min-width: 32px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .no-match {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 24px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="logo">픽뮤직</a>
+      <ul class="nav-links">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="music.html" class="active">음악 목록</a></li>
+        <li><a href="about.html">소개</a></li>
+        <li><a href="privacy.html">개인정보처리방침</a></li>
+        <li><button class="btn-request">음악 신청</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="music-list-page">
+    <h1>음악 목록</h1>
+    <p class="page-sub" id="totalCount">로딩 중...</p>
+
+    <input
+      class="music-search"
+      type="search"
+      id="searchInput"
+      placeholder="곡명 또는 아티스트 검색"
+      autocomplete="off"
+    >
+
+    <p class="music-count" id="matchCount"></p>
+    <ol class="music-ol" id="musicList"></ol>
+    <p class="no-match hidden" id="noMatch">검색 결과가 없습니다.</p>
+  </main>
+
+  <footer>
+    <p>
+      <a href="about.html">사이트 소개</a> &nbsp;·&nbsp;
+      <a href="privacy.html">개인정보처리방침</a>
+    </p>
+  </footer>
+
+  <!-- 음악 신청 모달 -->
+  <div class="modal-backdrop hidden" id="requestModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h2>음악 신청</h2>
+      <p class="modal-sub">추가했으면 하는 노래를 알려주세요.</p>
+      <form class="modal-form" id="requestForm">
+        <label>곡명</label>
+        <input type="text" name="song" placeholder="예: 밤양갱" required>
+        <label>아티스트</label>
+        <input type="text" name="artist" placeholder="예: 비비 (BIBI)" required>
+        <button class="modal-submit" type="submit" id="modalSubmit">신청하기</button>
+      </form>
+      <p class="modal-success hidden" id="modalSuccess">감사합니다! 검토 후 추가할게요 😊</p>
+    </div>
+  </div>
+
+  <script src="music-db.js"></script>
+  <script>
+    const allSongs = Object.values(MUSIC_DB).flat()
+      .sort((a, b) => a.title.localeCompare(b.title, 'ko'));
+
+    document.getElementById('totalCount').textContent = `총 ${allSongs.length.toLocaleString()}곡`;
+
+    const listEl    = document.getElementById('musicList');
+    const countEl   = document.getElementById('matchCount');
+    const noMatchEl = document.getElementById('noMatch');
+
+    function render(songs) {
+      listEl.innerHTML = '';
+      if (songs.length === 0) {
+        noMatchEl.classList.remove('hidden');
+        countEl.textContent = '';
+        return;
+      }
+      noMatchEl.classList.add('hidden');
+      countEl.textContent = songs.length < allSongs.length
+        ? `${songs.length}곡 검색됨`
+        : '';
+
+      const frag = document.createDocumentFragment();
+      songs.forEach((song, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <a href="https://www.youtube.com/watch?v=${song.id}" target="_blank" rel="noopener">
+            <span class="num">${i + 1}</span>
+            <span>${escHtml(song.title)}</span>
+          </a>`;
+        frag.appendChild(li);
+      });
+      listEl.appendChild(frag);
+    }
+
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    render(allSongs);
+
+    document.getElementById('searchInput').addEventListener('input', e => {
+      const q = e.target.value.trim().toLowerCase();
+      render(q ? allSongs.filter(s => s.title.toLowerCase().includes(q)) : allSongs);
+    });
+  </script>
+  <script src="js/request.js"></script>
+
+</body>
+</html>

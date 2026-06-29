@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>픽뮤직 - 사진으로 찾는 내 노래</title>
+  <meta name="description" content="사진을 업로드하면 색감과 분위기를 분석해 어울리는 노래를 YouTube에서 찾아드립니다. 무료로 이용하세요.">
+  <meta name="keywords" content="사진 노래 추천, AI 음악 추천, 사진 분위기 음악, 픽뮤직">
+  <link rel="canonical" href="https://your-domain.pages.dev/">
+  <meta property="og:title" content="픽뮤직 - 사진으로 찾는 내 노래">
+  <meta property="og:description" content="사진을 업로드하면 AI가 분위기를 분석해 어울리는 노래를 추천해드립니다.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="logo">픽뮤직</a>
+      <ul class="nav-links">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="music.html">음악 목록</a></li>
+        <li><a href="about.html">소개</a></li>
+        <li><a href="privacy.html">개인정보처리방침</a></li>
+        <li><button class="btn-request">음악 신청</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>나에게 어울리는 노래를<br>찾아드립니다</h1>
+      <p class="subtitle">내 사진을 올리면 분위기에 맞는 노래를<br>YouTube에서 바로 틀어드려요</p>
+    </section>
+
+    <section class="upload-section">
+      <div class="upload-box" id="uploadBox">
+        <div class="upload-placeholder" id="uploadPlaceholder">
+          <div class="upload-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <p class="upload-main-text">내 사진을 드래그하거나 클릭해서 업로드</p>
+          <p class="upload-hint">셀카, 인물 사진 · JPG · PNG · WEBP</p>
+          <button class="upload-btn" id="uploadTrigger">사진 선택</button>
+        </div>
+        <img id="previewImg" class="preview-img hidden" alt="업로드한 사진">
+        <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" class="hidden">
+      </div>
+
+      <div class="action-area hidden" id="actionArea">
+        <button class="find-btn" id="findBtn">어울리는 노래 찾기</button>
+        <button class="reset-btn" id="resetBtn">다른 사진 사용</button>
+      </div>
+    </section>
+
+    <div class="loading hidden" id="loading">
+      <div class="waveform" id="waveform">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <p id="loadingText"></p>
+      <p class="loading-sub" id="loadingSub"></p>
+    </div>
+
+    <section class="result-section hidden" id="resultSection">
+      <div class="songs-grid" id="songsGrid"></div>
+    </section>
+
+    <section class="how-to">
+      <h2>이렇게 사용하세요</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p class="step-title">사진 업로드</p>
+          <p class="step-desc">셀카, 인물 사진 어떤 사진이든 OK</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p class="step-title">색감 분석</p>
+          <p class="step-desc">사진의 색감·밝기·분위기를 자동으로 읽어냄</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p class="step-title">노래 추천</p>
+          <p class="step-desc">YouTube에서 딱 맞는 노래를 골라드림</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>어떤 사진을 올리면 좋나요?</summary>
+          <p>셀카, 여행 사진, 일상 사진 등 내가 찍힌 사진이면 무엇이든 좋습니다. 표정이나 배경의 색감과 분위기를 읽어 어울리는 노래를 골라드립니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>업로드한 사진이 저장되나요?</summary>
+          <p>아니요. 업로드한 사진은 AI 분석에만 사용되며 어떠한 서버에도 저장되지 않습니다. 분석이 끝나면 즉시 사라집니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>무료로 이용할 수 있나요?</summary>
+          <p>네, 완전 무료입니다. 별도 회원가입도 필요 없습니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>노래가 마음에 안 들면 어떻게 하나요?</summary>
+          <p>같은 사진으로 다시 분석을 요청하면 다른 결과가 나올 수 있습니다. 또는 다른 사진을 시도해보세요.</p>
+        </details>
+        <details class="faq-item">
+          <summary>어떤 장르의 음악이 추천되나요?</summary>
+          <p>K-POP, 인디, 재즈, 클래식, 팝, Lo-fi, OST 등 사진 분위기에 따라 장르에 관계없이 어울리는 음악을 추천합니다.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="about.html">사이트 소개</a> &nbsp;·&nbsp;
+      <a href="privacy.html">개인정보처리방침</a>
+    </p>
+  </footer>
+
+  <!-- 음악 신청 모달 -->
+  <div class="modal-backdrop hidden" id="requestModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h2>음악 신청</h2>
+      <p class="modal-sub">추가했으면 하는 노래를 알려주세요.</p>
+      <form class="modal-form" id="requestForm">
+        <label>곡명</label>
+        <input type="text" name="song" placeholder="예: 밤양갱" required>
+        <label>아티스트</label>
+        <input type="text" name="artist" placeholder="예: 비비 (BIBI)" required>
+        <button class="modal-submit" type="submit" id="modalSubmit">신청하기</button>
+      </form>
+      <p class="modal-success hidden" id="modalSuccess">감사합니다! 검토 후 추가할게요 😊</p>
+    </div>
+  </div>
+
+  <script src="music-db.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/request.js"></script>
+
+</body>
+</html>
