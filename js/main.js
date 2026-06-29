@@ -3,6 +3,7 @@
 // ===== STATE =====
 let currentFile = null;
 let faceApiReady = false;
+let currentSong = null;
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -62,6 +63,7 @@ function handleFile(file) {
 
 function reset() {
   currentFile = null;
+  currentSong = null;
   const fileInput = document.getElementById('fileInput');
   fileInput.value = '';
   document.getElementById('previewImg').classList.add('hidden');
@@ -71,6 +73,7 @@ function reset() {
   document.getElementById('resultSection').classList.add('hidden');
   document.getElementById('loading').classList.add('hidden');
   document.getElementById('findBtn').disabled = false;
+  document.getElementById('shareArea').classList.add('hidden');
 }
 
 // ===== FACE-API.JS (lazy load) =====
@@ -329,13 +332,180 @@ function renderResults(mood, videos) {
 
   if (videos.length === 0 || !videos[0]) {
     grid.innerHTML = '<p class="no-results">어울리는 노래를 찾지 못했습니다. 다른 사진을 시도해보세요.</p>';
+    document.getElementById('shareArea').classList.add('hidden');
   } else {
+    currentSong = videos[0];
     videos.forEach(video => grid.appendChild(createVideoCard(video)));
+    buildShareCard(currentFile, currentSong);
   }
 
   const section = document.getElementById('resultSection');
   section.classList.remove('hidden');
   section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ===== SHARE CARD =====
+function buildShareCard(file, song) {
+  const canvas = document.getElementById('shareCanvas');
+  const W = 1080, H = 1080;
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+
+  // 사진 로드 후 카드 그리기
+  const img = new Image();
+  const url = URL.createObjectURL(file);
+  img.onload = () => {
+    URL.revokeObjectURL(url);
+    drawShareCard(ctx, W, H, img, song);
+    setupShareButtons(canvas, song);
+  };
+  img.src = url;
+}
+
+function drawShareCard(ctx, W, H, photo, song) {
+  // 배경 그라디언트
+  const bg = ctx.createLinearGradient(0, 0, W, H);
+  bg.addColorStop(0, '#09090f');
+  bg.addColorStop(1, '#140d24');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // 사용자 사진 (상단 60%)
+  const PAD = 44;
+  const PW = W - PAD * 2;
+  const PH = Math.round(H * 0.58);
+  const PY = PAD;
+  ctx.save();
+  rrect(ctx, PAD, PY, PW, PH, 36);
+  ctx.clip();
+  // cover fit
+  const s = Math.max(PW / photo.width, PH / photo.height);
+  const dw = photo.width * s, dh = photo.height * s;
+  ctx.drawImage(photo, PAD + (PW - dw) / 2, PY + (PH - dh) / 2, dw, dh);
+  ctx.restore();
+
+  // 사진 하단 페이드
+  const fade = ctx.createLinearGradient(0, PY + PH - 120, 0, PY + PH);
+  fade.addColorStop(0, 'rgba(9,9,15,0)');
+  fade.addColorStop(1, 'rgba(9,9,15,0.55)');
+  ctx.fillStyle = fade;
+  ctx.save();
+  rrect(ctx, PAD, PY + PH - 120, PW, 120, 36);
+  ctx.fill();
+  ctx.restore();
+
+  // 구분선
+  const lineY = PY + PH + 52;
+  ctx.strokeStyle = 'rgba(124,58,237,0.35)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(PAD + 40, lineY);
+  ctx.lineTo(W - PAD - 40, lineY);
+  ctx.stroke();
+
+  // 음표 아이콘
+  ctx.fillStyle = '#a78bfa';
+  ctx.font = '40px serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('♫', W / 2, lineY + 52);
+
+  // 곡 제목 / 아티스트 분리
+  const dashIdx = song.title.lastIndexOf(' - ');
+  const songName  = dashIdx >= 0 ? song.title.slice(0, dashIdx) : song.title;
+  const artistName = dashIdx >= 0 ? song.title.slice(dashIdx + 3) : '';
+
+  const FONT = "'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif";
+
+  // 곡 제목
+  ctx.fillStyle = '#f1f5f9';
+  ctx.textBaseline = 'alphabetic';
+  const titleSize = fitFontSize(ctx, songName, `bold 60px ${FONT}`, W - PAD * 2 - 40, 60, 36);
+  ctx.font = `bold ${titleSize}px ${FONT}`;
+  ctx.fillText(clamp(ctx, songName, W - PAD * 2 - 40), W / 2, lineY + 130);
+
+  // 아티스트
+  if (artistName) {
+    ctx.fillStyle = '#a78bfa';
+    ctx.font = `500 40px ${FONT}`;
+    ctx.fillText(clamp(ctx, artistName, W - PAD * 2 - 40), W / 2, lineY + 195);
+  }
+
+  // 브랜딩
+  ctx.fillStyle = 'rgba(100,116,139,0.7)';
+  ctx.font = `26px ${FONT}`;
+  ctx.fillText('picmusic.pages.dev', W / 2, H - 44);
+}
+
+function rrect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.arcTo(x + w, y, x + w, y + r, r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.arcTo(x + w, y + h, x + w - r, y + h, r);
+  ctx.lineTo(x + r, y + h);
+  ctx.arcTo(x, y + h, x, y + h - r, r);
+  ctx.lineTo(x, y + r);
+  ctx.arcTo(x, y, x + r, y, r);
+  ctx.closePath();
+}
+
+function fitFontSize(ctx, text, baseFont, maxW, startSize, minSize) {
+  let size = startSize;
+  while (size > minSize) {
+    ctx.font = baseFont.replace(/\d+px/, size + 'px');
+    if (ctx.measureText(text).width <= maxW) break;
+    size -= 2;
+  }
+  return size;
+}
+
+function clamp(ctx, text, maxW) {
+  if (ctx.measureText(text).width <= maxW) return text;
+  let t = text;
+  while (t.length > 0 && ctx.measureText(t + '…').width > maxW) t = t.slice(0, -1);
+  return t + '…';
+}
+
+function setupShareButtons(canvas, song) {
+  document.getElementById('shareArea').classList.remove('hidden');
+
+  // 이미지 저장
+  document.getElementById('savePngBtn').onclick = () => {
+    const a = document.createElement('a');
+    a.download = 'picmusic.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  };
+
+  // X 공유
+  const text = encodeURIComponent(`내 사진에 어울리는 노래를 찾았어요 🎵\n${song.title}\n\n#픽뮤직`);
+  const url  = encodeURIComponent('https://picmusic.pages.dev');
+  document.getElementById('xShareBtn').onclick = () => {
+    window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+  };
+
+  // Web Share API (모바일)
+  const nativeBtn = document.getElementById('nativeShareBtn');
+  if (navigator.share) {
+    nativeBtn.classList.remove('hidden');
+    nativeBtn.onclick = async () => {
+      try {
+        canvas.toBlob(async blob => {
+          const file = new File([blob], 'picmusic.png', { type: 'image/png' });
+          if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            await navigator.share({ files: [file], title: '픽뮤직', text: song.title });
+          } else {
+            await navigator.share({ title: '픽뮤직', text: song.title, url: 'https://picmusic.pages.dev' });
+          }
+        }, 'image/png');
+      } catch {}
+    };
+  } else {
+    nativeBtn.classList.add('hidden');
+  }
 }
 
 function createVideoCard(video) {

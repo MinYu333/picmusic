@@ -566,6 +566,63 @@ header {
   grid-column: 1 / -1;
 }
 
+/* ===== SHARE ===== */
+.share-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.share-canvas {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  display: block;
+  box-shadow: var(--shadow);
+}
+
+.share-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  border: none;
+}
+
+.share-btn:hover  { opacity: 0.85; transform: translateY(-1px); }
+.share-btn:active { transform: scale(0.97); }
+
+.share-btn:not(.share-btn-x):not(.share-btn-native) {
+  background: var(--accent-g);
+  color: #fff;
+}
+
+.share-btn-x {
+  background: #000;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.share-btn-native {
+  background: var(--card2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
 /* ===== HOW-TO ===== */
 .how-to {
   max-width: 720px;

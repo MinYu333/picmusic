@@ -75,6 +75,23 @@
 
     <section class="result-section hidden" id="resultSection">
       <div class="songs-grid" id="songsGrid"></div>
+      <div class="share-area hidden" id="shareArea">
+        <canvas class="share-canvas" id="shareCanvas"></canvas>
+        <div class="share-btns">
+          <button class="share-btn" id="savePngBtn">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 2a1 1 0 01.894.553l5 10A1 1 0 0115 14H5a1 1 0 01-.894-1.447l5-10A1 1 0 0110 2z" transform="rotate(180 10 10)"/><path d="M3 17h14a1 1 0 000-2H3a1 1 0 000 2z"/></svg>
+            이미지 저장
+          </button>
+          <button class="share-btn share-btn-x" id="xShareBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X에 공유
+          </button>
+          <button class="share-btn share-btn-native hidden" id="nativeShareBtn">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/></svg>
+            공유하기
+          </button>
+        </div>
+      </div>
     </section>
 
     <section class="how-to">
