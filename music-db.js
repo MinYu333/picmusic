@@ -1,7 +1,3 @@
-// 자동 생성 파일 — 직접 수정하지 마세요
-// 마지막 업데이트: 2026. 6. 29. 오전 11:32:04
-// 총 1021곡 | energetic:338 emotional:259 intense:238 dreamy:186
-
 const MUSIC_DB = {
   "energetic": [
     {
@@ -181,10 +177,6 @@ const MUSIC_DB = {
       "title": "Love Story - Epik High"
     },
     {
-      "id": "qZd7E2Skxt0",
-      "title": "HOME - BTS"
-    },
-    {
       "id": "mPVDGOVjRQ0",
       "title": "ON - BTS"
     },
@@ -199,10 +191,6 @@ const MUSIC_DB = {
     {
       "id": "wKyMIrBClYw",
       "title": "Instagram - DEAN"
-    },
-    {
-      "id": "TSG6p4lMULQ",
-      "title": "Who Are You - Loco"
     },
     {
       "id": "B1ShLiq3EVc",
@@ -385,10 +373,6 @@ const MUSIC_DB = {
       "title": "LEFT RIGHT - XG"
     },
     {
-      "id": "5NzfqW_Yt6Y",
-      "title": "Bling-Bang-Bang-Born - Creepy Nuts"
-    },
-    {
       "id": "kd5LJ4r-vEY",
       "title": "SOMETHING AIN'T RIGHT - XG"
     },
@@ -403,10 +387,6 @@ const MUSIC_DB = {
     {
       "id": "0kKd6fVPayU",
       "title": "BON - Number_i"
-    },
-    {
-      "id": "9G9CPZ8Zd7k",
-      "title": "Aldnoah.Zero - Celestial Rebellion"
     },
     {
       "id": "CbH2F0kXgTY",
@@ -433,10 +413,6 @@ const MUSIC_DB = {
       "title": "Ain't No Hard Feelings - BoA (보아)"
     },
     {
-      "id": "5_va4UJJFkU",
-      "title": "Renka蓮花 - - 09:29 Anata no Negai o Utau Mono"
-    },
-    {
       "id": "4MmhtCroPEI",
       "title": "Stolen [DEBUT] - H//PE Princess"
     },
@@ -445,20 +421,8 @@ const MUSIC_DB = {
       "title": "The Symphony of Fxxkboys - Whee In (휘인)"
     },
     {
-      "id": "GlBREVtnnlc",
-      "title": "The Pet Girl of Sakurasou - Bloom Beyond the Dawn"
-    },
-    {
       "id": "bf9lLK9WFNY",
       "title": "7角-the1 - Nanatsu no Taizai"
-    },
-    {
-      "id": "Oz53zQUeMUM",
-      "title": "오늘도 편의점에서 - - 今日もコンビニで"
-    },
-    {
-      "id": "lq8rA68xkO8",
-      "title": "겨울의 마법 - aogumo"
     },
     {
       "id": "l0vUtRwObp4",
@@ -487,10 +451,6 @@ const MUSIC_DB = {
     {
       "id": "mrV8kK5t0V8",
       "title": "I Just Might - Bruno Mars"
-    },
-    {
-      "id": "OA4F9t3E6wc",
-      "title": "So Easy (To Fall In Love) - Olivia Dean"
     },
     {
       "id": "xnP7qKxwzjg",
@@ -601,10 +561,6 @@ const MUSIC_DB = {
       "title": "Khalid - Present"
     },
     {
-      "id": "lYOn-hJFDgw",
-      "title": "Someone Like You - | 6. Meric Again, Veronica Pichardo"
-    },
-    {
       "id": "VuNIsY6JdUw",
       "title": "Taylor Swift - You Belong With Me"
     },
@@ -713,14 +669,6 @@ const MUSIC_DB = {
       "title": "Adelyn Paik - Happily Ever After"
     },
     {
-      "id": "b9p6SmGYfaY",
-      "title": "Knock Boots - Chevon"
-    },
-    {
-      "id": "Lf5A1G8S0EU",
-      "title": "One Way Ticket - ONE OK ROCK"
-    },
-    {
       "id": "cbqvxDTLMps",
       "title": "BETELGEUSE - Yuuri"
     },
@@ -745,10 +693,6 @@ const MUSIC_DB = {
       "title": "DA$H - VVS"
     },
     {
-      "id": "D4NkQ9z65w8",
-      "title": "Enhypen - Fatal Trouble"
-    },
-    {
       "id": "JKJlXQxzTHg",
       "title": "Akie秋絵xNatsuo夏璃夜 - - 26:44 Asu no Yozora Shoukai Han"
     },
@@ -759,14 +703,6 @@ const MUSIC_DB = {
     {
       "id": "5TudZQsVi7s",
       "title": "첫사랑은 저주다 (First Love Is a Curse) - YUJU (유주)"
-    },
-    {
-      "id": "8RUFYJv_Ngo",
-      "title": "Ao Haru Ride - Blue Spring Echoes"
-    },
-    {
-      "id": "gAqfEHgKCuY",
-      "title": "Food Battle Start! - Shokugeki no Soma"
     },
     {
       "id": "SuCZ5g8Kr2M",
@@ -825,10 +761,6 @@ const MUSIC_DB = {
       "title": "Pete Bellis & Tommy, Costa Mee - | 13. Rise Up (Paul Lock Remix)"
     },
     {
-      "id": "Bag5ssD0fRE",
-      "title": "Flowers (DE SOFFER Remix) - Miley Cyrus"
-    },
-    {
       "id": "vNoKguSdy4Y",
       "title": "I Knew You Were Trouble - Taylor Swift"
     },
@@ -843,10 +775,6 @@ const MUSIC_DB = {
     {
       "id": "veNOFfqj6CA",
       "title": "‘In Between’ - Wilderado"
-    },
-    {
-      "id": "wXavFX0dNm4",
-      "title": "Maria - | 7. Protocleus, LYSSA"
     },
     {
       "id": "1FVF-9KQiPo",
@@ -997,20 +925,8 @@ const MUSIC_DB = {
       "title": "블루스크린 (Bluescreen) [former Weki Meki] - JI SUYEON (지수연)"
     },
     {
-      "id": "ec6xKEhKYc8",
-      "title": "Fruits Basket (2019) - Chains of Light"
-    },
-    {
-      "id": "ouhroPXWpWE",
-      "title": "Main Theme 2016 - Fairy Tail"
-    },
-    {
       "id": "KTZ-y85Erus",
       "title": "사실은 기다렸어 - - ほんとうは待ってた"
-    },
-    {
-      "id": "Tp3DSGWIreo",
-      "title": "Icchan - - 1:21:26 Rain Stops, Goodbye"
     },
     {
       "id": "AcgVdNFT73k",
@@ -1023,10 +939,6 @@ const MUSIC_DB = {
     {
       "id": "cnyecqZGsMQ",
       "title": "Far away (아르민 테마곡) - 진격의 거인"
-    },
-    {
-      "id": "yRwifIURUjY",
-      "title": "취기에 기대어 - Wanuka"
     },
     {
       "id": "Rt9tW3cMLhI",
@@ -1065,10 +977,6 @@ const MUSIC_DB = {
       "title": "This Is - Ella Mai"
     },
     {
-      "id": "_g3ZwjN6254",
-      "title": "Gio Mee - | 10. Just Give Me Love (Paul Lock Remix)"
-    },
-    {
       "id": "WE_qbbltbjs",
       "title": "‘Distant Skies’ - Old Sea Brigade"
     },
@@ -1083,14 +991,6 @@ const MUSIC_DB = {
     {
       "id": "LDY_XyxBu8A",
       "title": "SZA (SpydaTEK Edit) - Snooze"
-    },
-    {
-      "id": "nkzPvART7Vo",
-      "title": "Salt feat. Courtney Drummey - | 2. DJSM, Robbe, New Beat Order"
-    },
-    {
-      "id": "xWiMxf-j-zE",
-      "title": "Hangover - | 21. Stayer, Benlon"
     },
     {
       "id": "-CmadmM5cOk",
@@ -1117,10 +1017,6 @@ const MUSIC_DB = {
       "title": "나만, 봄 - 볼빨간사춘기"
     },
     {
-      "id": "DtVNL81WeHM",
-      "title": "You(=I) - 볼빨간사춘기"
-    },
-    {
       "id": "1VqxWNwgf5Q",
       "title": "Lemon Tang - Hearts2Hearts"
     },
@@ -1135,10 +1031,6 @@ const MUSIC_DB = {
     {
       "id": "CbNAenM0LrE",
       "title": "Wonderland - Onewe"
-    },
-    {
-      "id": "ZJeOWKWLKGM",
-      "title": "Unaware Drunkard (취한 줄을 모르고) - MEGATERA·ZERO"
     },
     {
       "id": "Q3K0TOvTOno",
@@ -1209,10 +1101,6 @@ const MUSIC_DB = {
       "title": "NEW LOOK - MISAMO"
     },
     {
-      "id": "wIJauoKFxqk",
-      "title": "Gurren Lagann - Spiral Destiny"
-    },
-    {
       "id": "2By3feOVw20",
       "title": "Mahi - yama"
     },
@@ -1245,10 +1133,6 @@ const MUSIC_DB = {
       "title": "Seventeen - Hit"
     },
     {
-      "id": "N8geKMoypnE",
-      "title": "Say You Love Me Here - ここで好きって言ってみて"
-    },
-    {
       "id": "E5Az6Pb2xnA",
       "title": "$TAY THE NIGHT - VVS"
     },
@@ -1261,16 +1145,8 @@ const MUSIC_DB = {
       "title": "delete - Sword Art Online"
     },
     {
-      "id": "Jlu-IPt7IM4",
-      "title": "Darling in the FranXX - Synchronize the Sky"
-    },
-    {
       "id": "gBKdQiBsRDU",
       "title": "ぜくろ - そっけない"
-    },
-    {
-      "id": "9Jnn5Cm4m44",
-      "title": "사랑의 시나리오 - 괴도키드"
     },
     {
       "id": "1VWb4qRdR80",
@@ -1309,10 +1185,6 @@ const MUSIC_DB = {
       "title": "‘terre haute’ - little luna"
     },
     {
-      "id": "hATjEl4en3U",
-      "title": "‘Life Is Good’ - The Hunts"
-    },
-    {
       "id": "mf6NMeJRtI4",
       "title": "I Know - BLXD"
     },
@@ -1339,10 +1211,6 @@ const MUSIC_DB = {
     {
       "id": "I2TBGUEBBm4",
       "title": "‘you.’ - Marlhy"
-    },
-    {
-      "id": "-3CoxIuCR0I",
-      "title": "Sergio T - | 9. Love Don't Let Me Go"
     },
     {
       "id": "JZm6uCdeKJY",
@@ -1423,10 +1291,6 @@ const MUSIC_DB = {
       "title": "Don't Say You Love Me - 진"
     },
     {
-      "id": "COv0zahhjVQ",
-      "title": "나의 여름 설명서 - 재쓰비"
-    },
-    {
       "id": "UWyw9wTPgv4",
       "title": "BURN - ARTMS"
     },
@@ -1463,14 +1327,6 @@ const MUSIC_DB = {
       "title": "Suki ni Naccha Dame na Hito (좋아하게 되면 안되는 사람) - Oishi Masayoshi"
     },
     {
-      "id": "ebQ_GFChOSw",
-      "title": "Wherever you are - ONE OK ROCK"
-    },
-    {
-      "id": "uIbCOSoeWlA",
-      "title": "86 – Eighty Six - GHOSTS OF THE FRONTLINE"
-    },
-    {
       "id": "9qRCARM_LfE",
       "title": "Ai Wo Tsutaetaidatoka - aimyon"
     },
@@ -1499,16 +1355,8 @@ const MUSIC_DB = {
       "title": "Motto - ITZY"
     },
     {
-      "id": "6wHI_rLQiSc",
-      "title": "PWLT [f(x)] - Krystal"
-    },
-    {
       "id": "_gyultVTesk",
       "title": "BTS - 0"
-    },
-    {
-      "id": "1O1ki1Th9yg",
-      "title": "Goodbye, Bye-Bye - サヨナラ、バイバイ"
     },
     {
       "id": "uwJWPrqe5EM",
@@ -1569,10 +1417,6 @@ const MUSIC_DB = {
     {
       "id": "uQFVqltOXRg",
       "title": "Get You x Rock Wit’cha (MM Edit) - Daniel Caesar"
-    },
-    {
-      "id": "TEwpQyGHN64",
-      "title": "Paul Lock - | 8. Waiting For You"
     },
     {
       "id": "dmMzA_WARBE",
@@ -1639,14 +1483,6 @@ const MUSIC_DB = {
       "title": "Coin - IU"
     },
     {
-      "id": "pM-3OIwsCws",
-      "title": "MIROH X How You Like That (KMKZE MASHUP) - Stray Kids vs BLACKPINK"
-    },
-    {
-      "id": "tu96HWfQVrE",
-      "title": "NewJeans (BRLLNT House Remix) - OMG"
-    },
-    {
       "id": "zKfs2EM8LQ4",
       "title": "Girlfriend - (G)I-DLE"
     },
@@ -1657,10 +1493,6 @@ const MUSIC_DB = {
     {
       "id": "IcwHopeT5gY",
       "title": "TXT - Beautiful Strangers"
-    },
-    {
-      "id": "eCZq1kFw3-Q",
-      "title": "BLACKPINK - PRETTY SAVAGE"
     },
     {
       "id": "rsZwrTNklos",
@@ -1681,10 +1513,6 @@ const MUSIC_DB = {
     {
       "id": "9iV-RmWapk8",
       "title": "Beautiful Life - Xdinary Heroes"
-    },
-    {
-      "id": "cxcgTYFLNd0",
-      "title": "oops! - ILLIT"
     },
     {
       "id": "ByX8EZq8500",
@@ -1771,14 +1599,6 @@ const MUSIC_DB = {
       "title": "Paraglider - Olivia Marsh"
     },
     {
-      "id": "JUJsoD6Pbuw",
-      "title": "Lovely★Complex - HEIGHTS OF MY HEART"
-    },
-    {
-      "id": "G1iWc9jbYlY",
-      "title": "Nin - - 08:32 Asu no Yozora Shōkaihan"
-    },
-    {
       "id": "-RRWvHTQjPE",
       "title": "Neon Genesis Evangelion - ANGELIC REQUIEM"
     },
@@ -1853,10 +1673,6 @@ const MUSIC_DB = {
     {
       "id": "KEI4qSrkPAs",
       "title": "Can't Feel My Face - The Weeknd"
-    },
-    {
-      "id": "9Wtx4v81xxU",
-      "title": "Llámame - wrs"
     },
     {
       "id": "UgcYLj4TLyo",
@@ -2011,10 +1827,6 @@ const MUSIC_DB = {
       "title": "BOYNEXTDOOR - One and Only"
     },
     {
-      "id": "acZ7A5w_kSE",
-      "title": "UP - KARINA(카리나)"
-    },
-    {
       "id": "V8ovLcXVhPY",
       "title": "SRA - truth is"
     },
@@ -2029,14 +1841,6 @@ const MUSIC_DB = {
     {
       "id": "aHTI0SXGVS0",
       "title": "IS THIS LOVE - XG"
-    },
-    {
-      "id": "aImEb9GeMOo",
-      "title": "Akie秋絵xNatsuo夏璃夜 - - 26:44 Asu no Yozora Shoukai Han"
-    },
-    {
-      "id": "-0hPgGabnyA",
-      "title": "Steins-Gate - PARADOX ROAR"
     },
     {
       "id": "Opp9nqiN5m0",
@@ -2079,14 +1883,6 @@ const MUSIC_DB = {
       "title": "R.I.P - dita"
     },
     {
-      "id": "nOU3S4aZH0c",
-      "title": "Clannad + Clannad: After Story - Hikari no Mae de"
-    },
-    {
-      "id": "GbwmDOAoIIk",
-      "title": "Uzumaku Neppuu - Naruto Shippuden"
-    },
-    {
       "id": "OIdOal008bo",
       "title": "Ryoko - - 13:11 Sayoko"
     },
@@ -2113,10 +1909,6 @@ const MUSIC_DB = {
     {
       "id": "aSWBaZi7UYc",
       "title": "My Way - Olivia Rodrigo"
-    },
-    {
-      "id": "QWrafQg2zNY",
-      "title": "That's So True - Gracie Abrams"
     },
     {
       "id": "jH1RNk8954Q",
@@ -2159,10 +1951,6 @@ const MUSIC_DB = {
       "title": "Open Arm - BLXD"
     },
     {
-      "id": "z89i61ssEyw",
-      "title": "Dub-I-Dub - | 26. The Trendy & Boostereo"
-    },
-    {
       "id": "nfWlot6h_JM",
       "title": "Shake It Off - Taylor Swift"
     },
@@ -2179,14 +1967,6 @@ const MUSIC_DB = {
       "title": "Earthquake - 지수 (Jisoo)"
     },
     {
-      "id": "VSyFil7PYZE",
-      "title": "나의 사춘기에게 - 볼빨간사춘기"
-    },
-    {
-      "id": "opH7dIA9-iU",
-      "title": "동그라미 - 최유리"
-    },
-    {
       "id": "Qe8fa4b5xNU",
       "title": "Good Goodbye - HWASA"
     },
@@ -2199,16 +1979,8 @@ const MUSIC_DB = {
       "title": "D (Half Moon) - DEAN"
     },
     {
-      "id": "yUvppnhqlBY",
-      "title": "가을 아침 - IU"
-    },
-    {
       "id": "aFsS59DkFhc",
       "title": "Okey Dokey - MINO, ZICO"
-    },
-    {
-      "id": "-JrDUl4zN-E",
-      "title": "TAKEDOWN by HUNTRIX - - 11:55"
     },
     {
       "id": "xn8mQqz2xmM",
@@ -2307,10 +2079,6 @@ const MUSIC_DB = {
       "title": "UNICA - LOVEONE (러브원)"
     },
     {
-      "id": "8nX76NFhpYs",
-      "title": "Kano - - 39:19 Irony"
-    },
-    {
       "id": "Jy-QS27q7lA",
       "title": "케세라세라 - Mrs. GREEN APPLE"
     },
@@ -2359,10 +2127,6 @@ const MUSIC_DB = {
       "title": "Worst Behaviour (Emcee Breezy One in A Million Mashup) - KWN"
     },
     {
-      "id": "qLWimRX_i7U",
-      "title": "Costa Mee - | 2. Call Me (Original Mix)"
-    },
-    {
       "id": "nwsewSMWIas",
       "title": "Mr. Saxobeat (Hi Def Remix) - Alexandra Stan"
     },
@@ -2379,16 +2143,8 @@ const MUSIC_DB = {
       "title": "‘Another Life’ - Dirty Nice"
     },
     {
-      "id": "HCsGupYlnvk",
-      "title": "Like A G6 - | 14. Twin, Veronica Bravo, CoverMode"
-    },
-    {
       "id": "wyK7YuwUWsU",
       "title": "Taylor Swift - New Romantics"
-    },
-    {
-      "id": "dRWb9aBdl-A",
-      "title": "Taylor Swift - The Life of a Showgirl"
     },
     {
       "id": "gl1aHhXnN1k",
@@ -2513,20 +2269,12 @@ const MUSIC_DB = {
       "title": "ChouCho - - 36:40 Authentic Symphony"
     },
     {
-      "id": "twgTfZyAMsE",
-      "title": "Knights of Sidonia - Stellar Resolve"
-    },
-    {
       "id": "SIuF37EWaLU",
       "title": "東京フラッシュ - Vaundy"
     },
     {
       "id": "1IlTeOMCNJU",
       "title": "左右盲 - ヨルシカ"
-    },
-    {
-      "id": "MTaYGTO_ELs",
-      "title": "My Best Friend is a Cat - 親友は猫"
     },
     {
       "id": "u2Vfu3swf0E",
@@ -2545,10 +2293,6 @@ const MUSIC_DB = {
       "title": "Tomorrow X Together - Good Boy Gone Bad"
     },
     {
-      "id": "CkntZ7ijS2s",
-      "title": "My Best Friend is a Cat - 親友は猫"
-    },
-    {
       "id": "J7OhGsGbaM4",
       "title": "MUSEUM - OWIS (오위스)"
     },
@@ -2557,28 +2301,12 @@ const MUSIC_DB = {
       "title": "Kimi ni Todoke - Kaze ni Todoku"
     },
     {
-      "id": "8KZ9qJhqFRQ",
-      "title": "Gen2tree02 Neji--Chi -广2tree02 ネ日｜-血 - Nanatsu no Taizai"
-    },
-    {
-      "id": "Mdto_hFIXAs",
-      "title": "Kano - - 27:20 Calc."
-    },
-    {
       "id": "JiqQAZi5aFI",
       "title": "鹿乃(Kano) - Glow"
     },
     {
       "id": "gNg2Qw5R-Q4",
       "title": "Serenade - 나토리"
-    },
-    {
-      "id": "PEHaV1PIzFU",
-      "title": "하늘노래 - kentaro"
-    },
-    {
-      "id": "pt1aDTmSI4A",
-      "title": "Hello Mr. my yesterday - Hundred Percent Free"
     },
     {
       "id": "wNJ4r2WsUMI",
@@ -2603,10 +2331,6 @@ const MUSIC_DB = {
     {
       "id": "kzjLepoaaY0",
       "title": "VKTM - SICKOTOY x INNA x TAG"
-    },
-    {
-      "id": "gsLszCKtsZo",
-      "title": "‘Carefree’ - Elephant Motel"
     },
     {
       "id": "i5pUOVC50Y8",
@@ -2797,20 +2521,8 @@ const MUSIC_DB = {
       "title": "Cherry Blossom - HITGS (힛지스)"
     },
     {
-      "id": "YAXTn0E-Zgo",
-      "title": "Weathering With You - Kimi ga Kureta Hikari"
-    },
-    {
-      "id": "jsLjmAg1tXo",
-      "title": "Kuokugen Switch - Haikyuu !!"
-    },
-    {
       "id": "4e5PMfVpcp0",
       "title": "Hanatan - - 31:32 Tell Your World"
-    },
-    {
-      "id": "QU4CDILgOB8",
-      "title": "My Best Friend is a Cat - 親友は猫"
     },
     {
       "id": "paVYNlZ5Xuk",
@@ -2881,10 +2593,6 @@ const MUSIC_DB = {
       "title": "‘Hotspot’ - NIGHT TRAVELER"
     },
     {
-      "id": "5_IE62KTlwg",
-      "title": "Thousand Years - | 16. Alban Chela & Marin Hoxha"
-    },
-    {
       "id": "Sl6en1NPTYM",
       "title": "Taylor Swift - I Can Do It With a Broken Heart"
     },
@@ -2917,10 +2625,6 @@ const MUSIC_DB = {
       "title": "썸 탈꺼야 - 볼빨간사춘기"
     },
     {
-      "id": "dxJF_79NX20",
-      "title": "심술 - 볼빨간사춘기"
-    },
-    {
       "id": "qE35JN1ogeI",
       "title": "타임캡슐 - 다비치"
     },
@@ -2939,10 +2643,6 @@ const MUSIC_DB = {
     {
       "id": "8dJyRm2jJ-U",
       "title": "That That (prod. & feat. SUGA of BTS) - Psy"
-    },
-    {
-      "id": "tvRbXnJwW7A",
-      "title": "YOUR IDOL by SAJA BOYS - - 8:50"
     },
     {
       "id": "diMyNjWyDW8",
@@ -3011,10 +2711,6 @@ const MUSIC_DB = {
     {
       "id": "WNcNOaUWRaU",
       "title": "I'm invicible (나는 최강) - Mrs. GREEN APPLE"
-    },
-    {
-      "id": "hvueJmJVnzQ",
-      "title": "Show Me Your Phone (폰 좀 보여줘봐) - MAISONdes"
     },
     {
       "id": "bt8wNQJaKAk",
@@ -3125,10 +2821,6 @@ const MUSIC_DB = {
       "title": "Chanel (Emcee Breezy TBD Mashup) - Tyla"
     },
     {
-      "id": "3BcMVPSByH8",
-      "title": "Paul Lock - | 1. Burning In Our Eyes (Original Mix)"
-    },
-    {
       "id": "EVr__5Addjw",
       "title": "Dangerous (ft. Sam Martin) - David Guetta"
     },
@@ -3191,10 +2883,6 @@ const MUSIC_DB = {
     {
       "id": "aKyt6Ahxwss",
       "title": "HIT THE FLOOR - tripleS"
-    },
-    {
-      "id": "hciM9EyDSOE",
-      "title": "Love story - 볼빨간사춘기"
     },
     {
       "id": "6iZyquKcpzg",
@@ -3301,10 +2989,6 @@ const MUSIC_DB = {
       "title": "Pineapple Tonight - パイナップル・トゥナイト"
     },
     {
-      "id": "gkS5ptelm5U",
-      "title": "Mary Usagi [めあり] - - 30:32 Kataomoi"
-    },
-    {
       "id": "Ha7SeBiF1CA",
       "title": "‘Nobody Lives Here’ - SYML"
     },
@@ -3315,10 +2999,6 @@ const MUSIC_DB = {
     {
       "id": "9sqgpi74u7w",
       "title": "One day - H//PE Princess"
-    },
-    {
-      "id": "YXG1CxVDRL8",
-      "title": "BTS - Baepsae"
     },
     {
       "id": "2mUjLyyZOW0",
@@ -3335,10 +3015,6 @@ const MUSIC_DB = {
     {
       "id": "3X08UfKOE-M",
       "title": "Tequila - INNA"
-    },
-    {
-      "id": "YKFl4PESoM4",
-      "title": "Pete Bellis & Tommy, Costa Mee - | 7. Stay With Me (Paul Lock Remix)"
     },
     {
       "id": "kSbISVTprSg",
@@ -3399,20 +3075,8 @@ const MUSIC_DB = {
       "title": "Curtain Call - Yuuri"
     },
     {
-      "id": "v0BrTJHoYC0",
-      "title": "Attack on Titan - Wings Beyond the Walls"
-    },
-    {
       "id": "ERLEeGVWYxg",
       "title": "Sugar Song To Bitter Step - UNISON SQUARE GARDEN"
-    },
-    {
-      "id": "hfAAVw8l05A",
-      "title": "HAZZIE feat Ai from RSP - - 16:06 Yubiwa to Aikagi"
-    },
-    {
-      "id": "vOCc8AKs48Q",
-      "title": "記憶の香り (기억의향기) [former CLC / EL7Z UP] - YEEUN (예은)"
     },
     {
       "id": "2HcVZm_4qAI",
@@ -3429,10 +3093,6 @@ const MUSIC_DB = {
     {
       "id": "5iSlfF8TQ9k",
       "title": "몇 번이고 한숨 - - 何回もため息"
-    },
-    {
-      "id": "EpTRbZ08Hbk",
-      "title": "Kano - - 44:43 Yoake to Hotaru"
     },
     {
       "id": "PBlOi5OVcKs",
@@ -3455,20 +3115,12 @@ const MUSIC_DB = {
       "title": "Pa Mi - Gran Error feat. Spania '99"
     },
     {
-      "id": "DHRb7wG53eA",
-      "title": "Closer - | 19. DJSM & Robbe & Nito-Onna"
-    },
-    {
       "id": "LM62y0JLxJ0",
       "title": "답장을 보낸지 - 임영웅"
     },
     {
       "id": "3iPico0uHHg",
       "title": "그대... 떠나도 - 김호중"
-    },
-    {
-      "id": "uCwM5K7KBI4",
-      "title": "널 생각해 - 원 모어 찬스 (one more chance)"
     },
     {
       "id": "K_eRv94tcec",
@@ -3511,18 +3163,6 @@ const MUSIC_DB = {
       "title": "eden - マハラージャン"
     },
     {
-      "id": "3uaktSbdSYk",
-      "title": "The Battle of Concepts - Haikyuu !!"
-    },
-    {
-      "id": "j08LDhYC9cU",
-      "title": "떠오르지 않는 이야기 - - 思い出せない話"
-    },
-    {
-      "id": "emrt46SRyYs",
-      "title": "Kano - - 48:29 Daybreak Frontline"
-    },
-    {
       "id": "bzLgbHY5xbs",
       "title": "Butter-Fly - 와다 코지"
     },
@@ -3539,20 +3179,12 @@ const MUSIC_DB = {
       "title": "The Weeknd - Blinding Lights"
     },
     {
-      "id": "3B63NXESQ18",
-      "title": "Ava Max - Salt"
-    },
-    {
       "id": "NOubzHCUt48",
       "title": "Die Young - Ke$ha"
     },
     {
       "id": "6YNZlXfW6Ho",
       "title": "Ella Mai - Boo'd Up"
-    },
-    {
-      "id": "L8DWJ86ky0A",
-      "title": "TiK ToK - | 1. EQRIC & JOZUA & Robbe"
     },
     {
       "id": "K_9T9L3WvIE",
@@ -3575,10 +3207,6 @@ const MUSIC_DB = {
       "title": "STUNNER - TEN"
     },
     {
-      "id": "gx5dn_fBxYw",
-      "title": "HOME SWEET HOME - G-DRAGON"
-    },
-    {
       "id": "muTUmQnqGDY",
       "title": "은방울 - DANIEL"
     },
@@ -3597,10 +3225,6 @@ const MUSIC_DB = {
     {
       "id": "qlgEadao-Sk",
       "title": "Almond Chocolate - ILLIT"
-    },
-    {
-      "id": "L9nHQefuPw4",
-      "title": "'Magnetic' (Underground House Remix) (Prod. MINDA) - ILLIT"
     },
     {
       "id": "negtrQu5mTA",
@@ -3683,20 +3307,12 @@ const MUSIC_DB = {
       "title": "Happy End - back number"
     },
     {
-      "id": "i4k_5I_1xO0",
-      "title": "Call Me Now - 今すぐ電話して"
-    },
-    {
       "id": "wM4laths4-Y",
       "title": "Kapi [かぴ] - - 27:02 Sekai wa Koi ni Ochite Iru"
     },
     {
       "id": "lRYyfwv2Fiw",
       "title": "‘THE LOWS’ - Caleb Hearn"
-    },
-    {
-      "id": "4M4I68sILV0",
-      "title": "‘Evergreen’ - Tyler Brown Williams"
     },
     {
       "id": "v6yykc1krDM",
@@ -3763,24 +3379,12 @@ const MUSIC_DB = {
       "title": "Bad Investment - BLXD"
     },
     {
-      "id": "OdUBb55Q_xI",
-      "title": "It Depends - Chris Brown, Bryson Tiller"
-    },
-    {
-      "id": "CCHdMIEGaaM",
-      "title": "Get Lucky (ft. Pharrell Williams) (Disco House Remix) - Daft Punk"
-    },
-    {
       "id": "RvN6Mw-c008",
       "title": "Read My Lips - INNA x Farina"
     },
     {
       "id": "Oyn2GzEV5JM",
       "title": "SZA ft. Travis Scott - Open Arms"
-    },
-    {
-      "id": "J3DahMkR5Sg",
-      "title": "ily - | 17. MOHA & Irma & MEQQ"
     },
     {
       "id": "aSugSGCC12I",
@@ -3899,10 +3503,6 @@ const MUSIC_DB = {
       "title": "Matsuri - Fujii Kaze"
     },
     {
-      "id": "W239MgG54L8",
-      "title": "Kana Hanazawa - - 14:21 I Wonder Why"
-    },
-    {
       "id": "-jxD8BCsN1k",
       "title": "Vivy: Fluorite Eye’s Song - Fluorite Requiem"
     },
@@ -3919,10 +3519,6 @@ const MUSIC_DB = {
       "title": "Hana - Fujii Kaze"
     },
     {
-      "id": "PMi0bqQOBvg",
-      "title": "‘Real Love’ - Hills x Hills"
-    },
-    {
       "id": "kjZVV4rXuiA",
       "title": "‘The One You Love’ - NIGHT TRAVELER"
     },
@@ -3935,20 +3531,12 @@ const MUSIC_DB = {
       "title": "Tomorrow X Together - Stick With You"
     },
     {
-      "id": "1EnElciv8hc",
-      "title": "Pano Mimimi - - 01:02:10 Soramoyou"
-    },
-    {
       "id": "01pEUMbf5Mw",
       "title": "we don't go to bed tonight - YOUNG POSSE"
     },
     {
       "id": "fcFlHmkY-ZI",
       "title": "See through - 소유"
-    },
-    {
-      "id": "UcPEvqMPm-M",
-      "title": "Toradora! - Claws of the Heart"
     },
     {
       "id": "6lHO0FWN_MQ",
@@ -4015,20 +3603,12 @@ const MUSIC_DB = {
       "title": "Piece of My Heart - Wiz Kid ft Brent Faiyaz"
     },
     {
-      "id": "HinSnLG5k8Q",
-      "title": "Costa Mee - | 11. Feel Your Lovin (Paul Lock Remix)"
-    },
-    {
       "id": "AVrJw8u_8II",
       "title": "‘Want Me Back’ - Trousdale"
     },
     {
       "id": "pc0mxOXbWIU",
       "title": "F*ck You - CeeLo Green"
-    },
-    {
-      "id": "NuoGAgfvnBM",
-      "title": "‘In The Evening Light’ - Twiceyoung"
     },
     {
       "id": "py75EN-830I",
@@ -4063,10 +3643,6 @@ const MUSIC_DB = {
       "title": "Candy - NCT Dream"
     },
     {
-      "id": "Vx-pqlBfHyM",
-      "title": "Kanzen Kankaku Dreamer (완전감각Dreamer) - ONE OK ROCK"
-    },
-    {
       "id": "trlOTS4nKO4",
       "title": "LUCID DREAM [JP Release] - IVE"
     },
@@ -4081,10 +3657,6 @@ const MUSIC_DB = {
     {
       "id": "Tf_xlX98XGE",
       "title": "‘Someday We Will Dream About Today’ - The Sways"
-    },
-    {
-      "id": "yuE7biiP8Hc",
-      "title": "Paul Lock - | 5. Just A Dream"
     },
     {
       "id": "XcK25n-NefI",
