@@ -48,6 +48,10 @@ function handleFile(file) {
     alert('JPG, PNG, WEBP 이미지 파일만 업로드 가능합니다.');
     return;
   }
+  if (file.size > 20 * 1024 * 1024) {
+    alert('파일 크기는 20MB 이하여야 합니다.');
+    return;
+  }
   currentFile = file;
   const reader = new FileReader();
   reader.onload = e => {

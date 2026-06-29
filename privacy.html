@@ -114,9 +114,9 @@
       <p class="modal-sub">추가했으면 하는 노래를 알려주세요.</p>
       <form class="modal-form" id="requestForm">
         <label>곡명</label>
-        <input type="text" name="song" placeholder="예: 밤양갱" required>
+        <input type="text" name="song" placeholder="예: 밤양갱" maxlength="100" required>
         <label>아티스트</label>
-        <input type="text" name="artist" placeholder="예: 비비 (BIBI)" required>
+        <input type="text" name="artist" placeholder="예: 비비 (BIBI)" maxlength="100" required>
         <button class="modal-submit" type="submit" id="modalSubmit">신청하기</button>
       </form>
       <p class="modal-success hidden" id="modalSuccess">감사합니다! 검토 후 추가할게요 😊</p>
