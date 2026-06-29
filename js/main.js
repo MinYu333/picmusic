@@ -484,7 +484,7 @@ function setupShareButtons(canvas, song) {
   const text = encodeURIComponent(`내 사진에 어울리는 노래를 찾았어요 🎵\n${song.title}\n\n#픽뮤직`);
   const url  = encodeURIComponent('https://picmusic.pages.dev');
   document.getElementById('xShareBtn').onclick = () => {
-    window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
   };
 
   // Web Share API (모바일)
